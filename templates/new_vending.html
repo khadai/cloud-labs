@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>new vending</h2>
+
+<form method="post">
+    <label>
+        <div>vending name</div>
+        <input type="text" name="vending_name" value="{{vending_name}}" required>
+    </label>
+
+    <label>
+            <div>image url</div>
+            <input type="url" name="image_url" value="{{image_url}}" required>
+    </label>
+
+    <label>
+        <div>address</div>
+        <input type="text" name="address" value="{{address}}" required>
+    </label>
+
+    <label lang="en-US">
+        <div>latitude</div>
+        <input type="number" name="latitude" value="{{latitude}}" step="any" required>
+    </label>
+
+    <label lang="en-US">
+        <div>longitude</div>
+        <input type="number" name="longitude" value="{{longitude}}" step="any" required>
+    </label>
+
+    <label>
+        <div>available trademarks</div>
+        <input type="text" name="trademarks" value="{{trademarks}}" required>
+    </label>
+
+    <label>
+        <div>number of available goods</div>
+        <input type="number" name="available_goods" value="{{available_goods}}" min="0" required>
+    </label>
+
+    <label>
+        <div>number of sold goods</div>
+        <input type="number" name="sold_goods" value="{{sold_goods}}" min="0" required>
+    </label>
+
+    <br>
+    <input type="submit">
+</form>
+{% endblock %}
