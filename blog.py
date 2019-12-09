@@ -63,6 +63,11 @@ class NewVendingPost(VendingHandler):
         ag = int(self.request.get('available_goods'))
         sg = int(self.request.get('sold_goods'))
 
+        # f= open("text.txt","w+")
+        # f.write(self.request)
+        # f.close
+        print(self.request)
+
         if vn and img_url and lat and lon and adrs and tm and ag and sg:
             p = Vending(parent=vending_key(), vending_name=vn, image_url=img_url, address=adrs, latitude=lat,
                         longitude=lon, trademarks=tm, available_goods=ag, sold_goods=sg)
